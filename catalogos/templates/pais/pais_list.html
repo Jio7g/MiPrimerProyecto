@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listar Países</title>
+</head>
+<body>
+  {% extends "base.html" %}
+
+{% block content %}
+  <h1 class="titulo-pais-list">Listado de Países</h1>
+  <ul>
+    {% for pais in paises %}
+      <li class="pais-list">{{ pais.nombre }} ({{ pais.codigo }}) - <a class="pais-update-buttom" href="{% url 'pais_update' pais.pk %}">Editar</a> | <a class="pais-delete-buttom" href="{% url 'pais_delete' pais.pk %}">Eliminar</a></li>
+    {% endfor %}
+  </ul>
+  <a class="agg-pais-list-buttom" href="{% url 'pais_create' %}">Agregar País</a>
+{% endblock %}
+</body>
+</html>
+

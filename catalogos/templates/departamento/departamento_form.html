@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Departamento</title>
+</head>
+<body>
+  {% extends "base.html" %}
+
+  {% block content %}
+    <h1 class="titulo-edit-dep">{% if departamentos.pk %}Editar Departamento{% else %}Agregar Departamento{% endif %}</h1>
+    <form class="form-add-dep" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="buttom-save-dep" type="submit">Guardar</button>
+    </form>
+    <a class="buttom-return-dep-list" href="{% url 'departamentos_list' %}">Volver al Listado de Departamentos</a>
+  {% endblock %}
+   
+</body>
+</html>

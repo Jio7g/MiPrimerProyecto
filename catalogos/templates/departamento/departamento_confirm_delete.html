@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar Departamento</title>
+</head>
+<body>
+  {% extends "base.html" %}
+
+  {% block content %}
+    <h1 class="titulo-delete-pais">Confirmar Eliminación de Departamento</h1>
+    <p class="warning-message">¿Estás seguro de que deseas eliminar el Departamento "{{ departamento.nombre }}" ({{ departamento.codigo }})?</p>
+    <form class="form-delete-pais" method="post">
+      {% csrf_token %}
+      <button class="buttom-delete-pais" type="submit">Eliminar</button>
+    </form>
+    <a class="buttom-cancel-delete-pais" href="{% url 'departamentos_list' %}">Cancelar</a>
+  {% endblock %}
+   
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion</title>
+    
+</head>
+<body>
+    <!-- extiende de base.html -->
+{% extends 'base.html' %}
+<!-- Define el título de la página -->
+{% block title %}Iniciar Sesión{% endblock %}
+{% block content %}
+<!-- Define el contenido de la página -->
+<!-- centrar el contenido -->
+<div class="col-md-4 offset-md-3">
+<h1>Iniciar Sesión</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+</form>
+</div>
+{% endblock %}
+</body>
+</html>

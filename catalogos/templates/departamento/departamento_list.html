@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Departamentos</title>
+</head>
+<body>
+  {% extends "base.html" %}
+
+{% block content %}
+  <h1 class="titulo-dep-list">Listado de Departamentos</h1>
+  <ul>
+    {% for departamento in departamentos %}
+    <li class="dep-list">{{ departamento.nombre }} ({{ departamento.codigo }}) - <a class="dep-update-buttom" href="{% url 'departamentos_update' departamento.pk %}">Editar</a> | <a class="dep-delete-buttom" href="{% url 'departamentos_delete' departamento.pk %}">Eliminar</a></li>
+    {% endfor %}
+  </ul>
+  <a class="agg-dep-list-buttom" href="{% url 'departamentos_create' %}">Agregar Departamento</a>
+{% endblock %}
+</body>
+</html>
+

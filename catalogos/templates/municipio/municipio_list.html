@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Municipios</title>
+</head>
+<body>
+  {% extends "base.html" %}
+
+{% block content %}
+  <h1 class="titulo-municipio-list">Listado de Municipios</h1>
+  <ul>
+    {% for municipio in municipios %}
+      <li class="municipio-list">{{ municipio.nombre }} ({{ municipio.codigo }}) - <a class="municipio-update-buttom" href="{% url 'municipios_update' municipio.pk %}">Editar</a> | <a class="municipio-delete-buttom" href="{% url 'municipios_delete' municipio.pk %}">Eliminar</a></li>
+    {% endfor %}
+  </ul>
+  <a class="agg-municipio-list-buttom" href="{% url 'municipios_create' %}">Agregar Municipio</a>
+{% endblock %}
+</body>
+</html>
+

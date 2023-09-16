@@ -1,0 +1,354 @@
+/* styles.css */
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #343a40;  /* Un color gris oscuro */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: #0e0f0f !important;  /* Un color blanco suave */
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para el contenido principal */
+main.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el pie de página */
+footer {
+    margin-top: 30px;
+    border-top: 1px solid #dee2e6;  /* Un color gris claro */
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-opciones {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.nav-link-opciones {
+    text-decoration: none;
+    color: #666;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 2px solid transparent;
+    display: block;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-opciones:hover {
+    background-color: #2196F3;
+    color: #ffffff;
+    border-color: #2196F3;
+}
+
+/* Estilos para la página de inicio de sesión */
+
+/* Centrar el contenido de la página de inicio de sesión verticalmente */
+main.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 56px - 60px); /* Altura de la ventana, menos el header y el footer */
+}
+
+/* Estilos para el contenedor del formulario */
+.col-md-4.offset-md-3 {
+    background-color: #f8f9fa;  /* Fondo suave */
+    padding: 30px;              /* Espaciado interno */
+    border-radius: 8px;         /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Estilo del título del formulario */
+.col-md-4.offset-md-3 h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #343a40;             /* Color de texto oscuro */
+    text-align: center;
+}
+
+/* Espaciado entre los campos del formulario */
+.col-md-4.offset-md-3 form p {
+    margin-bottom: 15px;
+}
+
+/* Aumentar el tamaño y mejorar estilos de los campos de texto y contraseñas */
+.col-md-4.offset-md-3 form input[type="text"],
+.col-md-4.offset-md-3 form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+/* Aumentar el tamaño y mejorar estilos del botón de inicio de sesión */
+.col-md-4.offset-md-3 form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Estilos específicos para _list.html */
+
+/* Estilo para el título */
+.titulo-pais-list, 
+.titulo-municipio-list, 
+.titulo-dep-list{
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #2E4053; /* Oscuro tono azul/gris */
+    text-align: center;
+    background-color: #E5E7E9; /* Gris claro */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Estilo general para la lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto; /* Centrar la lista en la página */
+}
+
+.pais-list, 
+.municipio-list, 
+.dep-list{
+    padding: 15px;
+    border: 1px solid #D5D8DC; /* Gris claro */
+    margin-bottom: 10px;
+    border-radius: 7px;
+    background-color: #EAEDED; /* Gris muy claro */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.pais-list:hover,
+.municipio-list:hover, 
+.dep-list:hover {
+    background-color: #FDFEFE; /* Blanco ligeramente sombreado para el hover */
+}
+
+/* Estilos para los botones de editar y eliminar */
+.pais-update-buttom, 
+.pais-delete-buttom, 
+.municipio-update-buttom, 
+.municipio-delete-buttom,
+.dep-update-buttom, 
+.dep-delete-buttom{
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.pais-update-buttom, 
+.municipio-update-buttom,
+.dep-update-buttom{
+    background-color: #5DADE2; /* Azul claro */
+    color: white;
+}
+
+.pais-update-buttom:hover, 
+.municipio-update-buttom:hover,
+.dep-update-buttom:hover {
+    background-color: #3498DB; /* Azul más oscuro en hover */
+}
+
+.pais-delete-buttom, 
+.municipio-delete-buttom,
+.dep-delete-buttom {
+    background-color: #EC7063; /* Rojo claro */
+    color: white;
+}
+
+.pais-delete-buttom:hover, 
+.municipio-delete-buttom:hover,
+.dep-delete-buttom:hover {
+    background-color: #E74C3C; /* Rojo más oscuro en hover */
+}
+
+/* Estilo para el botón de Agregar*/
+.agg-pais-list-buttom, 
+.agg-municipio-list-buttom,
+.agg-dep-list-buttom {
+    display: block;
+    width: 150px;
+    margin: 20px auto; /* Centrar el botón en la página */
+    padding: 10px;
+    background-color: #82E0AA; /* Verde claro */
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.agg-pais-list-buttom:hover 
+.agg-municipio-list-buttom:hover
+.agg-dep-list-buttom:hover {
+    background-color: #58D68D; /* Verde más oscuro en hover */
+}
+
+/* Estilos específicos para la página de agregar/editar país */
+
+/* Estilo para el título */
+.titulo-edit-pais,
+.titulo-edit-municipio,
+.titulo-edit-dep {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1F618D; /* Azul oscuro */
+    text-align: center;
+    background-color: #D4E6F1; /* Azul claro */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Estilo general para el formulario */
+.form-add-pais,
+.form-add-municipio,
+.form-add-dep {
+    max-width: 500px;
+    margin: 0 auto; /* Centrar el formulario en la página */
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px solid #D5D8DC; /* Gris claro */
+    background-color: #F2F4F4; /* Gris muy claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para el formulario */
+}
+
+/* Estilo para los campos del formulario */
+.form-add-pais,
+.form-add-municipio,
+.form-add-dep p {
+    margin-bottom: 20px;
+}
+
+/* Estilo para el botón de guardar */
+.buttom-save-pais,
+.buttom-save-municipio,
+.buttom-save-dep {
+    padding: 10px 20px;
+    background-color: #58D68D; /* Verde claro */
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.buttom-save-pais:hover,
+.buttom-save-municipio:hover,
+.buttom-save-dep:hover {
+    background-color: #28B463; /* Verde más oscuro en hover */
+}
+
+/* Estilo para el botón de volver al listado */
+.buttom-return-pais-list,
+.buttom-return-municipio-list,
+.buttom-return-dep-list {
+    display: block;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: #E74C3C; /* Rojo */
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.buttom-return-pais-list:hover,
+.buttom-return-municipio-list:hover,
+.buttom-return-dep-list:hover {
+    background-color: #C0392B; /* Rojo más oscuro en hover */
+}
+/* Estilos específicos para la página de confirmar eliminación */
+
+/* Estilo para el título */
+.titulo-delete-pais {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #E74C3C; /* Rojo */
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #FADBD8; /* Rojo claro */
+}
+
+/* Estilo para el mensaje de advertencia */
+.warning-message {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #A93226; /* Rojo oscuro */
+}
+
+/* Estilo general para el formulario */
+.form-delete-pais {
+    max-width: 300px;
+    margin: 0 auto; /* Centrar el formulario en la página */
+    text-align: center;
+}
+
+/* Estilo para el botón de eliminar */
+.buttom-delete-pais {
+    padding: 10px 20px;
+    background-color: #E74C3C; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    font-weight: bold;
+}
+
+.buttom-delete-pais:hover {
+    background-color: #C0392B; /* Rojo más oscuro en hover */
+}
+
+/* Estilo para el botón de cancelar */
+.buttom-cancel-delete-pais {
+    display: block;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: #58D68D; /* Verde claro */
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.buttom-cancel-delete:hover {
+    background-color: #28B463; /* Verde más oscuro en hover */
+}
+
+
