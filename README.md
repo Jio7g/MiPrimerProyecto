@@ -28,6 +28,6 @@ También debe de subir el archivo requirements.txt
 (es igual en los demás modulos "Departamentos y Municipios")
 <img width="960" alt="Agregar_Pais" src="https://github.com/Jio7g/MiPrimerProyecto/assets/142697112/6854915f-a1a1-46a5-949c-e09ea8ba872d">
 
-## Elininar País
+## Eliminar País
 (es igual en los demás modulos "Departamentos y Municipios")
 <img width="960" alt="Eliminar_Pais" src="https://github.com/Jio7g/MiPrimerProyecto/assets/142697112/9abc9972-cce9-42e8-bc54-714b012736d2">
