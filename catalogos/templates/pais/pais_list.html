@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="templates/styles.css">
   <title>Listar Países</title>
 </head>
 <body>
@@ -15,6 +16,17 @@
       <li class="pais-list">{{ pais.nombre }} ({{ pais.codigo }}) - <a class="pais-update-buttom" href="{% url 'pais_update' pais.pk %}">Editar</a> | <a class="pais-delete-buttom" href="{% url 'pais_delete' pais.pk %}">Eliminar</a></li>
     {% endfor %}
   </ul>
+  <li class="center-pagination">
+    {% if page_obj.has_previous %}
+    <a  class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+    {% endif %}
+    </li>   
+    <li>
+    </li>
+   
   <a class="agg-pais-list-buttom" href="{% url 'pais_create' %}">Agregar País</a>
 {% endblock %}
 </body>

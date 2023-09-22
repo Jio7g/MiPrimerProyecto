@@ -1,5 +1,19 @@
 /* styles.css */
+/* Estilo para la paginación */
+.page-link {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #E5E7E9;  /* Fondo suave */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
 
+.page-link:hover {
+    background-color: #2196F3; /* Color de fondo cuando pasas el ratón por encima */
+    color: #FFFFFF; /* Color de texto cuando pasas el ratón por encima */
+}
 /* Estilo general */
 body {
     font-family: Arial, sans-serif;
@@ -351,4 +365,27 @@ ul {
     background-color: #28B463; /* Verde más oscuro en hover */
 }
 
+
+
+
+.center-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-btn-pag {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #3498db; /* Color azul */
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.custom-btn-pag:hover {
+    background-color: #2980b9; /* Un tono más oscuro de azul para el efecto hover */
+}
 

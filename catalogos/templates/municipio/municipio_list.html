@@ -15,6 +15,17 @@
       <li class="municipio-list">{{ municipio.nombre }} ({{ municipio.codigo }}) - <a class="municipio-update-buttom" href="{% url 'municipios_update' municipio.pk %}">Editar</a> | <a class="municipio-delete-buttom" href="{% url 'municipios_delete' municipio.pk %}">Eliminar</a></li>
     {% endfor %}
   </ul>
+
+  <li class="center-pagination">
+    {% if page_obj.has_previous %}
+    <a  class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+    {% endif %}
+    </li>   
+    <li>
+
   <a class="agg-municipio-list-buttom" href="{% url 'municipios_create' %}">Agregar Municipio</a>
 {% endblock %}
 </body>
